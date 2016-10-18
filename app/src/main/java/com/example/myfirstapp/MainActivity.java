@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -12,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String hello = this.getResources().getString(R.string.hello_world);
+        TextView textView = new TextView(this);
+        textView.setText(hello);
+
+        LinearLayout layout = (LinearLayout) this.findViewById(R.id.main_layout);
+        layout.addView(textView);
     }
 
     /**
