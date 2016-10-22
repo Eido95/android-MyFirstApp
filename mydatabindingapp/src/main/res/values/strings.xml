@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Data Binding App</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="administrator">Administrator</string>
+    <string name="change_administrator">Change Administrator</string>
+</resources>

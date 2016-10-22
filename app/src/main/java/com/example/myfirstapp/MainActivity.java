@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    public final static String ACTIVITY2_MESSAGE = "com.example.myfirstapp.ACTIVITY2";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
      * @param view The view that was clicked.
      */
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //Intent intent = new Intent(this, DisplayMessageActivity.class);
+        //EditText editText = (EditText) findViewById(R.id.edit_message);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        //this.startActivity(intent);
+        Intent intent = new Intent(this, MainActivity2.class);
         this.startActivity(intent);
     }
 }

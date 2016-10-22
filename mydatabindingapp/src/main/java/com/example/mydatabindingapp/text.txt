@@ -1,0 +1,79 @@
+isHovered
+
+boolean isHovered ()
+Returns true if the view is currently hovered.
+
+Returns
+boolean:	True if the view is currently hovered.
+
+setHovered(boolean)
+onHoverChanged(boolean)
+
+setHovered
+
+void setHovered (boolean hovered)
+Sets whether the view is currently hovered.
+
+Calling this method also changes the drawable state of the view. This enables the view to react to hover by using different drawable resources to change its appearance.
+
+The onHoverChanged(boolean) method is called when the hovered state changes.
+
+Parameters
+hovered	boolean: True if the view is hovered.
+See also:
+
+isHovered()
+onHoverChanged(boolean)
+
+onHoverChanged
+
+void onHoverChanged (boolean hovered)
+Implement this method to handle hover state changes.
+
+This method is called whenever the hover state changes as a result of a call to setHovered(boolean).
+
+Parameters
+hovered	boolean: The current hover state, as returned by isHovered().
+See also:
+
+isHovered()
+setHovered(boolean)
+
+getKeepScreenOn
+
+Added in API level 1
+boolean getKeepScreenOn ()
+Returns whether the screen should remain on, corresponding to the current value of KEEP_SCREEN_ON.
+
+Related XML Attributes:
+
+android:keepScreenOn
+Returns
+boolean	Returns true if KEEP_SCREEN_ON is set.
+See also:
+
+setKeepScreenOn(boolean)
+
+setKeepScreenOn
+
+Added in API level 1
+void setKeepScreenOn (boolean keepScreenOn)
+Controls whether the screen should remain on, modifying the value of KEEP_SCREEN_ON.
+
+Related XML Attributes:
+
+android:keepScreenOn
+Parameters
+keepScreenOn	boolean: Supply true to set KEEP_SCREEN_ON.
+See also:
+
+getKeepScreenOn()
+
+setEnabled
+
+Added in API level 1
+void setEnabled (boolean enabled)
+Set the enabled state of this view. The interpretation of the enabled state varies by subclass.
+
+Parameters
+enabled	boolean: True if this view is enabled, false otherwise.
