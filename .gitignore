@@ -32,14 +32,17 @@ proguard/
 # Android Studio captures folder
 captures/
 
-# Intellij
+# IntelliJ files
 *.iml
-.idea/workspace.xml
-# I think .idea/libraries files should be included if the project is 
-# not dependent on another project or module. If, however, the project 
-# is dependent on a module that contains the libraries, then this 
+.idea/*
+# I think .idea/libraries files should be included if the project is
+# not dependent on another project or module. If, however, the project
+# is dependent on a module that contains the libraries, then this
 # file should be ignored at the project level, but not by the module.
-# .idea/libraries
+# If the project is Maven or Gradle based and these library files are
+# generated automatically on import, you can exclude them from the version control.
+#  When the libraries are configured manually by the user, they should be shared.
+# !.idea/libraries
 
 # Keystore files
 *.jks
