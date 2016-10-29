@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@android:color/white"/> <!-- TODO: color according to current theme -->
+    <item>
+        <!-- TODO: change source bitmap -->
+        <bitmap
+            android:src="@drawable/wb_launcher_splash"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </item>
+    <!--<item-->
+        <!--android:gravity="bottom"-->
+        <!--android:top="200dp">-->
+        <!--<bitmap android:src="@mipmap/ic_launcher"/>-->
+    <!--</item>-->
+</layer-list>
