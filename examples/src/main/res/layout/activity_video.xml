@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.Examples.VideoActivity">
 
+    <!--
+    TODO: Add a video which constructed from h264 aac
+    priority on 1080p and more speakers usage.
+    (06/11/2016) Eido -->
     <TextureView android:id="@+id/video_texture"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
