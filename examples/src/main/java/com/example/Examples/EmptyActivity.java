@@ -1,9 +1,14 @@
 package com.example.Examples;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.SurfaceTexture;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Surface;
@@ -21,6 +26,12 @@ public class EmptyActivity extends AppCompatActivity
     private GridLayout screens;
     private MediaPlayer mediaPlayer;
     private TextureView screen;
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message = intent.getStringExtra("message");
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +42,7 @@ public class EmptyActivity extends AppCompatActivity
         this.screens = (GridLayout)this.findViewById(R.id.grid_screens);
         this.screen = (TextureView)screens.getChildAt(2);
         this.screen.setSurfaceTextureListener(this);
+        LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter("dummy-intent"));
         //screens = (GridView) findViewById(R.id.gridview);
         //screens.setAdapter(new ImageAdapter(this));
 
@@ -41,6 +53,13 @@ public class EmptyActivity extends AppCompatActivity
         //                Toast.LENGTH_SHORT).show();
         //    }
         //});
+    }
+
+    @Override
+    protected void onDestroy() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(this.receiver);
+
+        super.onDestroy();
     }
 
     /**

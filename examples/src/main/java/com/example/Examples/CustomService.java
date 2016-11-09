@@ -3,6 +3,7 @@ package com.example.Examples;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.support.v4.content.LocalBroadcastManager;
 
 public class CustomService extends Service {
 
@@ -15,6 +16,7 @@ public class CustomService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("dummy-intent"));
     }
 
     /**
